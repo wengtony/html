@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link href="css/top.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="scripts/jquery-1.12.4.min.js"></script>
+</head>
+
+<base target="top"/>
+<body>
+
+<div style="display:block;">
+<div style="float:left; height:30px; color: #272E7A; font-size:150%; font-weight:bold">市場管理系統</div>
+<div style="float:right; height:30px; width: 200px; text-align:center"> 
+<span style="color: #272E7A; font-size:100%; font-weight:bold"><s:property value="#session['managerinfo'].cname"/>陳小明</span>
+<input type="button" value="登出" onclick="location.href='Logout'"/>
+</div>
+</div>
+<div style="display:block; width:100px; margin-top:10px; clean:both;">
+<input id="hbtn1" type="button" value="收合" onclick="hideLeft()"/>
+<input id="hbtn2" type="button" value="展開" style="display:none;" onclick="showLeft()"/>
+</div>
+<script type="text/javascript">
+function hideLeft(){
+	top.document.getElementById('mframset').cols='0,*';
+	$('#hbtn1').hide();
+	$('#hbtn2').show();
+}
+function showLeft(){
+	top.document.getElementById('mframset').cols='136,*';
+	$('#hbtn2').hide();
+	$('#hbtn1').show();
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+.pop {
+	font-size:90%;
+}
+.poptb td{
+	border: 1px solid #7AA435;
+}
+.tdctx{
+	padding:5px;
+	text-align: justify;
+	text-justify:inter-ideograph;
+	line-height: 130%;
+
+}
+.popeven{
+	background-color: #F8FFE1;
+}
+.popnote{
+	margin-top:10px;
+	font-size:90%;
+	color: #FF0066;
+}
+.poptd0 div{
+	margin-top:3px;
+	margin-bottom:3px;
+}
+.poptd2 {
+	font-size:120%;
+	font-weight:bold;
+	color: blue;
+}
+#_actchange{
+	font-size:96%;
+	color: #AC094E;
+	text-decoration:underline;
+	cursor:pointer;
+}

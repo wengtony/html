@@ -1,0 +1,21 @@
+﻿.grptype{
+	cursor:pointer;
+	text-decoration:underline;
+	color:#3366FF;
+}
+#grpdiv{
+	 width:280px;height:250px;overflow:auto;border:1px solid #FF8CFF; background-color:#FFFFFF; display:none; position:absolute;padding:5px 0 5px 5px;
+}
+.subdiv{
+	margin-top:3px;
+	margin-bottom:3px;
+	cursor:pointer;
+}
+#authordiv{
+	 width:280px;height:250px;overflow:auto;border:1px solid #FF8CFF; background-color:#FFFFFF; display:none; position:absolute;padding:5px 0 5px 5px;
+}
+.authtype{
+	cursor:pointer;
+	text-decoration:underline;
+	color:#3366FF;
+}

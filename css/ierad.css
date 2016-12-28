@@ -1,0 +1,100 @@
+.tabBox .content {
+    position: relative;
+    z-index: 2;
+    border: 1px solid #CCC;
+    background: #FFF;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: #CCC 0 0 .25em;
+    -moz-box-shadow: #CCC 0 0 .25em;
+    box-shadow: #CCC 0 0 .25em;
+    behavior: url(PIE.htc);
+   
+}
+.tabBox .content2 {
+    position: relative;
+    z-index: 2;
+    border: 1px solid #CCC;
+    background: #E6F7FF;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: #CCC 0 0 .25em;
+    -moz-box-shadow: #CCC 0 0 .25em;
+    box-shadow: #CCC 0 0 .25em;
+    behavior: url(PIE.htc);
+   
+}
+
+.rptitle{
+	height:25px;
+	background: #FFFFFF;
+	border-bottom: 1px solid #CCC;
+	font-weight:bold;
+	color: #9933FF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+	background: #FFFFFF;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#FFFFFF), to(#DDDDDD));
+	background: -webkit-linear-gradient(#FFFFFF, #DDDDDD);
+	background: -moz-linear-gradient(#FFFFFF, #DDDDDD);
+	background: -ms-linear-gradient(#FFFFFF, #DDDDDD);
+	background: -o-linear-gradient(#FFFFFF, #DDDDDD);
+	background: linear-gradient(#FFFFFF, #DDDDDD);
+	-pie-background: linear-gradient(#FFFFFF, #DDDDDD);  
+	behavior: url(PIE.htc);
+
+}
+
+.rpover {
+		margin:0;
+		padding:0;
+    position: relative;
+    z-index: 2;
+    border: 1px solid #FFF;
+    background: #FF0066;
+    -webkit-box-shadow: rgba(20%,20%,40%,0.5) 2px 2px .25em;
+    -moz-box-shadow: rgba(20%,20%,40%,0.5) 2px 2px .25em;
+    box-shadow: rgba(20%,20%,40%,0.5) 2px 2px .25em;
+    behavior: url(PIE.htc);
+    float:left;
+}
+.rpnormal {
+		margin:0;
+		padding:0;
+    position: relative;
+    z-index: 2;
+    border: 1px solid #FFF;
+    background: #006600;
+    -webkit-box-shadow: rgba(20%,20%,40%,0.5) 2px 2px .25em;
+    -moz-box-shadow: rgba(20%,20%,40%,0.5) 2px 2px .25em;
+    box-shadow: rgba(20%,20%,40%,0.5) 2px 2px .25em;
+    behavior: url(PIE.htc);
+    float:left;
+}
+.rpdown {
+		margin:0;
+		padding:0;
+    position: relative;
+    z-index: 2;
+    border: 1px solid #FFF;
+    background: #F08315;
+    -webkit-box-shadow: rgba(20%,20%,40%,0.5) 2px 2px .25em;
+    -moz-box-shadow: rgba(20%,20%,40%,0.5) 2px 2px .25em;
+    box-shadow: rgba(20%,20%,40%,0.5) 2px 2px .25em;
+    behavior: url(PIE.htc);
+    float:left;
+}
+.rplimit{
+	background-image:url('../images/rplimit2.png');
+	background-repeat:repeat-y;
+}
+.rpfont{
+	padding-left:5px;
+	width:30px;
+	float:left;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}

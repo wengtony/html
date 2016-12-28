@@ -1,0 +1,15 @@
+body{
+	background-image:url('../images/top_bg.jpg');
+}
+.btn_bg {
+	font-size: 14px;
+	height: 26px;
+	color: #02114F;
+	background-image: url('../images/btn2.gif');
+	background-repeat: no-repeat;
+	background-position: left;
+	border: 1px solid #93ABD2;
+	width: inherit;
+	padding: 0 10px 0 12px; *
+	overflow: visible;
+}

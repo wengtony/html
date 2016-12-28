@@ -1,0 +1,80 @@
+body{
+	font-family:標楷體;
+}
+sup{
+	font-family:標楷體;
+}
+.style1 {
+	text-align: right;
+}
+.style2 {
+	border-collapse: collapse;
+	border: 1px solid #BECEDA;
+	background-color: #FFFAE8;
+}
+.style2 td{
+	border: 1px solid #BECEDA;
+}
+.style3 {
+	text-align: right;
+	color: #008000;
+}
+.style4 {
+	text-align: center;
+	color: #0000FF;
+	background-color: #E6E6FF;
+}
+.style5 {
+	text-align: right;
+	color: #0066FF;
+	background-color: #E6E6FF;
+}
+.listtb{
+	border-collapse: collapse;
+	border: 1px solid #E0E0E0;
+}
+.listtb td{
+	border: 1px solid #E0E0E0;
+	height:25px;
+}
+.style6 {
+	background-color: #FFF0CC;
+}
+.style7 {
+	text-align: right;
+	background-color: #FFF0CC;
+}
+.style8 {
+	text-align: right;
+	color: #FF0000;
+}
+.style9 {
+	font-size: large;
+}
+.blk1odd {
+	background-color: #F9F2DD;
+}
+.blk1even {
+	background-color: #FCF9EF;
+}
+.blk2odd {
+	background-color: #D7FBEF;
+}
+.blk2even {
+	background-color: #EEFDF8;
+}
+.blk3odd {
+	background-color: #E4D2FB;
+}
+.blk3even {
+	background-color: #EEE2FC;
+}
+.blk4odd {
+	background-color: #D2EEFD;
+}
+.blk4even {
+	background-color: #EDF8FE;
+}
+.edit {
+	float:right; position:relative; top:-20px;cursor:pointer;
+}
