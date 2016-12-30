@@ -18,7 +18,7 @@
 
 
 <body>
-<form id="Paper" name="Paper" action="/submission/manage/Paper.xhtml" method="get">
+<form id="Paper" name="Paper" action="p31.htm" method="get">
 	<table class="searchcs" style="width:100%">
 		<tr>
 			<td class="titletd" style="height:27px">用電度數管理</td>
@@ -30,8 +30,7 @@
 					<td align="right" style="width:20%">市場名稱：</td>
 					<td style="width:30%">
 					
-					<select name="cid" id="clst" style="width:90%" onchange="putCflst(this)">
-    <option value="">---請選擇---</option>
+					<select name="cid" id="clst" style="width:90%">
     <option value="1">中央第一市場</option>
 		<option value="2">中央第二市場</option>
 		<option value="2">中央第三市場</option>
@@ -100,8 +99,8 @@
 		<td style="width:5%;">鋪號</td>
 		<td style="width:8%;">租用人</td>
 		<td style="width:9%;">用電年月</td>
-		<td style="width:12%;">用電度數 <input type="button" value="編輯" onclick="fixFee()"/></td>
-		<td>11月用電度數</td>
+		<td style="width:12%;">(12月)度數 <input type="button" value="編輯" onclick="fixFee()"/></td>
+		<td>(10月)用電數</td>
 	</tr>
 	<tbody id="resultcs">
 	
@@ -182,6 +181,12 @@
 					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>月：</td>
 					<td>
 						<input type="text" id="cid" name="vo.cid" maxlength="2" style="width:150px;"/>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;" class="subjecttitle">最新用電年月：</td>
+					<td>
+						105/10
 					</td>
 				</tr>
 			</table>
