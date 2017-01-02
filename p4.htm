@@ -74,12 +74,14 @@
 			<td align="center" style="height:30px">
 				<input type="submit" value="查詢" id="Paper_0" class="btn_bg"/>
 				<input class="btn_bg" type="button" value="重新整理" onclick="location.href='p1.htm';" />
+				<input type="button" value="產生收取月份" id="Paper_0" class="btn_bg" onclick="addOne()"/>
 			</td>
 		</tr>
 	</table>
 </form>
 
-<div style="margin:10px; padding:10px; border:1px solid #FF8040; width:450px;">
+<div>
+<div style="margin:10px; padding:10px; border:1px solid #FF8040; width:450px; float:left">
 	中央第一市場 －
 	基本費：
 	<span style="font-weight:bold;font-size:130%; color:#0000FF; padding-right:10px;">190</span>
@@ -87,6 +89,12 @@
 	<span style="font-weight:bold;font-size:130%; color:#0000FF; padding-right:10px;">3.27</span>
 	加權比：
 	<span style="font-weight:bold;font-size:130%; color:#0000FF; padding-right:10px;">1</span>
+</div>
+<div style="margin:10px; padding:10px; border:1px solid #FF8040; width:350px; float:left">
+	收據編號設定：
+	<span style="font-weight:bold;font-size:130%; color:#0000FF; padding-right:10px;">105120001</span>
+	<input type="button" value="設定收據編號" onclick="numSet()"/>
+</div>
 </div>
 
 <!-- 分頁模組 -->
@@ -103,12 +111,14 @@
 <div class="resultdivcs" id="layer1">
 <table class="resultcs" style="width:100%" cellpadding="3">
 	<tr class="toptitlecs">
-		<td style="width:7%; height: 31px;">底冊號碼</td>
-		<td style="width:10%;">市場名稱</td>
-		<td style="width:6%;">類別</td>
-		<td style="width:5%;">鋪號</td>
-		<td style="width:6%;">租用人</td>
-		<td style="width:7%;">繳費年月</td>
+		<td style="width:6%; height: 31px;">底冊號碼</td>
+		<!--<td style="width:10%;">市場名稱</td>-->
+		<td style="width:5%;">類別</td>
+		<td style="width:4%;">鋪號</td>
+		<td style="width:5%;">租用人</td>
+		<td style="width:6%;">繳費年月</td>
+		<td style="width:8%;">收據編號</td>
+		<td style="width:9%;">繳費日 <input type="button" value="編" onclick="fixFee()"/></td>
 		<td style="width:7%;">(12月)度數</td>
 		<td style="width:7%;">(10月)度數</td>
 		<td style="width:7%;">用電數</td>
@@ -121,12 +131,14 @@
 	
 	<tr>
 		<td style="height: 31px;">0026</td>
-		<td>中央第一市場</td>
+		<!--<td>中央第一市場</td>-->
 		<td>飲食</td>
 		<td>26</td>
 		<td>劉鴻世</td>
 		<td>105/12</td>
-		<td class="fee">2000</td>
+		<td>105120001</td>
+		<td class="fee"></td>
+		<td>2000</td>
 		<td>1888</td>
 		<td>122</td>
 		<td>3372</td>
@@ -140,12 +152,14 @@
 
 	<tr>
 		<td style="height: 31px;">0026</td>
-		<td>中央第一市場</td>
+		<!--<td>中央第一市場</td>-->
 		<td>飲食</td>
 		<td>26</td>
 		<td>劉鴻世</td>
 		<td>105/12</td>
-		<td class="fee">2000</td>
+		<td>105120002</td>
+		<td class="fee"></td>
+		<td>2000</td>
 		<td>1888</td>
 		<td>122</td>
 		<td>3372</td>
@@ -159,12 +173,14 @@
 
 	<tr>
 		<td style="height: 31px;">0026</td>
-		<td>中央第一市場</td>
+		<!--<td>中央第一市場</td>-->
 		<td>飲食</td>
 		<td>26</td>
 		<td>劉鴻世</td>
 		<td>105/12</td>
-		<td class="fee">2000</td>
+		<td>105120003</td>
+		<td class="fee"></td>
+		<td>2000</td>
 		<td>1888</td>
 		<td>122</td>
 		<td>3372</td>
@@ -178,12 +194,14 @@
 
 	<tr>
 		<td style="height: 31px;">0026</td>
-		<td>中央第一市場</td>
+		<!--<td>中央第一市場</td>-->
 		<td>飲食</td>
 		<td>26</td>
 		<td>劉鴻世</td>
 		<td>105/12</td>
-		<td class="fee">2000</td>
+		<td>105120004</td>
+		<td class="fee"></td>
+		<td>2000</td>
 		<td>1888</td>
 		<td>122</td>
 		<td>3372</td>
@@ -197,12 +215,14 @@
 
 	<tr>
 		<td style="height: 31px;">0026</td>
-		<td>中央第一市場</td>
+		<!--<td>中央第一市場</td>-->
 		<td>飲食</td>
 		<td>26</td>
 		<td>劉鴻世</td>
 		<td>105/12</td>
-		<td class="fee">2000</td>
+		<td>105120005</td>
+		<td class="fee"></td>
+		<td>2000</td>
 		<td>1888</td>
 		<td>122</td>
 		<td>3372</td>
@@ -239,15 +259,60 @@
 					</td>
 				</tr>
 				<tr>
-					<td style="height: 26px;" class="subjecttitle">最新用電年月：</td>
+					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>繳款方式：</td>
 					<td>
-						105/10
+						<select name="" style="width:150px">
+							<option value="">尚未繳款</option>
+							<option value="">已繳款</option>
+							<option value="">其他</option>
+						</select>
+						<input type="text" maxlength="30" value=""/>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;" class="subjecttitle">收據編號起始：</td>
+					<td>
+						<span style="font-weight:bold;font-size:130%; color:#0000FF;">105120001</span>
 					</td>
 				</tr>
 			</table>
 	</form>
 </div>
 
+<!-- form2 -->
+<div id="dialog-form2" style="display:none; font-size:96%;" title="編輯">
+	<form id="frm2">
+			<table class="searchtb" style="width:100%" cellpadding="3">
+				<tr>
+					<td style="height: 26px;width:30%;" class="subjecttitle"><span class="mustkeyin">* </span>民國年：</td>
+					<td>
+						<input type="text" id="cid" name="vo.cid" maxlength="3" style="width:150px;"/>
+						<span class="notectx">(3位數)</span>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>月：</td>
+					<td>
+						<input type="text" id="cid" name="vo.cid" maxlength="2" style="width:150px;"/>
+						<span class="notectx">(2位數)</span>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>流水號：</td>
+					<td>
+						<input type="text" id="cid" name="vo.cid" maxlength="2" style="width:150px;"/>
+						<span class="notectx">(4位數)</span>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;" class="subjecttitle">編號呈現：</td>
+					<td>
+						<span id="num2" style="font-weight:bold;font-size:130%; color:#0000FF;"></span>
+					</td>
+				</tr>
+			</table>
+	</form>
+</div>
 
 <script type="text/javascript">
 
@@ -256,7 +321,7 @@ function addOne() {
 	$('#updtr').hide();
 	$('#sid').val('');
 	$('#tid').val('');
-	$('#dialog-form').dialog('option', 'title', '產生用電月份');
+	$('#dialog-form').dialog('option', 'title', '產生收取月份');
 	var btns = {};
 	btns['新增'] = function() {
 		bb = validateAll();
