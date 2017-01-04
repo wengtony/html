@@ -1,0 +1,233 @@
+﻿
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>menu7-鋪位類別維護</title>
+<link href="css/main.css" type="text/css" rel="stylesheet" />
+<link href="css/humanity/jquery-ui.min.css	" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="scripts/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="scripts/jquery-ui-1.12.1.min.js"></script>
+<script type="text/javascript" src="scripts/tonyutils.js"></script>
+<script type="text/javascript" src="scripts/tonyinit.js"></script>
+</head>
+
+
+
+
+<body>
+<form id="Paper" name="Paper" action="/submission/manage/Paper.xhtml" method="get">
+	<table class="searchcs" style="width:100%">
+		<tr>
+			<td class="titletd" style="height:27px">鋪位類別維護</td>
+		</tr>
+		<tr>
+			<td>
+			
+			</td>
+		</tr>
+	</table>
+<p />
+	<table border="0" id="table4" style="width:100%; border-collapse: collapse">
+		<tr>
+			<td align="center" style="height:30px">
+				<input type="button" value="新增" id="Paper_0" class="btn_bg" onclick="addOne()"/>
+			</td>
+		</tr>
+	</table>
+</form>
+
+
+
+
+
+<!-- 分頁模組 -->
+<table class="pagecs" border="0" style="width:100%">
+	<tr>
+		<td>共 <span class="resultcountcs">20</span> 筆	</td>
+	</tr>
+</table>
+<!-- 分頁模組結束 -->
+
+<div class="resultdivcs" id="layer1">
+<table class="resultcs" style="width:100%" cellpadding="3">
+	<tr class="toptitlecs">
+		<td style="width:6%; height: 31px;">編號</td>
+		<td style="width:10%;">類別名稱</td>
+		<td style="width:7%;">是否使用</td>
+		<td>動作</td>
+	</tr>
+	<tbody id="resultcs">
+	
+	<tr>
+		<td style="height: 31px;">01</td>
+		<td>百貨</td>
+		<td>
+			<span class="yessp">是</span>
+		</td>
+		<td>
+			<input type="button" value="修改" onclick="openForm(6)"/>
+		</td>
+	</tr>
+
+	<tr>
+		<td style="height: 31px;">02</td>
+		<td>飲食</td>
+		<td>
+			<span class="yessp">是</span>
+		</td>
+		<td>
+			<input type="button" value="修改" onclick="openForm(6)"/>
+		</td>
+	</tr>
+
+	<tr>
+		<td style="height: 31px;">03</td>
+		<td>雜貨</td>
+		<td>
+			<span class="yessp">是</span>
+		</td>
+		<td>
+			<input type="button" value="修改" onclick="openForm(6)"/>
+		</td>
+	</tr>
+
+	<tr>
+		<td style="height: 31px;">04</td>
+		<td>疏菜</td>
+		<td>
+			<span class="yessp">是</span>
+		</td>
+		<td>
+			<input type="button" value="修改" onclick="openForm(6)"/>
+		</td>
+	</tr>
+
+	<tr>
+		<td style="height: 31px;">05</td>
+		<td>鮮果</td>
+		<td>
+			<span class="yessp">是</span>
+		</td>
+		<td>
+			<input type="button" value="修改" onclick="openForm(6)"/>
+		</td>
+	</tr>
+	
+	</tbody>
+</table>
+</div>
+
+
+<script type="text/javascript" src="scripts/tonyrow.js"></script>
+
+<!-- form -->
+<div id="dialog-form" style="display:none; font-size:96%;" title="編輯">
+	<form id="frm">
+			<table class="searchtb" style="width:100%" cellpadding="3">
+				<tr>
+					<td style="height: 26px;width:30%;" class="subjecttitle"><span class="mustkeyin">* </span>編號：</td>
+					<td>
+						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:150px;"/>
+						<input type="hidden" id="sid" name="vo.sid"/>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>類別名稱：</td>
+					<td>
+						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:50%;"/>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;" class="subjecttitle">是否使用：</td>
+					<td>
+						<select name="" style="width:50%">
+							<option value="">是</option>
+							<option value="">否</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+	</form>
+</div>
+
+<script type="text/javascript">
+
+function addOne() {
+	$('#frm').find('input[type=text], select, textarea').val('');
+	$('#updtr').hide();
+	$('#sid').val('');
+	$('#tid').val('');
+	$('#dialog-form').dialog('option', 'title', '新增鋪位類別');
+	var btns = {};
+	btns['新增'] = function() {
+		bb = validateAll();
+		if (!bb) {
+			return bb;
+		}
+		if(bb){
+			if($('#cid').val()==''){
+				alert('請輸入課程代碼!');
+				bb = false;
+				return bb;
+			}
+		}
+		if(bb){
+			if($('#cname').val()==''){
+				alert('請輸入課程名稱!');
+				bb = false;
+				return bb;
+			}
+		}
+		var frm = $('#frm');
+		var params = frm.serialize();
+		var actstr = 'CourseAjax!add.action';
+		$(".ui-dialog-buttonpane button:contains('新增')").button("disable");
+		$.ajax({
+			type: "POST",
+			url: actstr,
+			data: params
+		}).done(function(data) {
+			var msg = data['msg'];
+			if (msg.indexOf('ok') >= 0) {
+				alert('已新增!');
+				window.location.reload();
+			}
+			else {
+				alert(msg);
+				$(".ui-dialog-buttonpane button:contains('新增')").button("enable");
+				$('#dialog-form').dialog("close");
+			}
+		});
+	};
+	btns['取消'] = function() {
+		$('#dialog-form').dialog("close");
+	};
+			
+	$('#dialog-form').dialog('option', 'buttons', btns);
+	$('#dialog-form').dialog('open');
+}	
+$(function(){
+	var windowHeight = $(window).height()-20;
+	$("#dialog-form").dialog({
+		autoOpen: false,
+		height: 300,
+		width: 500,
+		modal: true,
+		open: function(event, ui) {
+		},
+		beforeClose: function(event, ui) {
+		}
+	});
+	
+	$("#dialog-form").bind( "clickoutside", function(event){
+		$(this).hide();
+	});
+
+});
+</script>
+</body>
+
+</html>
