@@ -93,7 +93,7 @@
 		<td style="width:9%;">租用人</td>
 		<td style="width:9%;">承租日期</td>
 		<td style="width:10%;">繳款方式</td>
-		<td style="width:10%;">舊電表</td>
+		<td style="width:8%;">電表數</td>
 		<td>動作</td>
 	</tr>
 	<tbody id="resultcs">
@@ -109,11 +109,13 @@
 			<span class="type1sp">收據繳款</span>
 		</td>
 		<td>
-			<span>否</span>
+			1
 		</td>
 		<td>
 			<input type="button" value="修改" onclick="openForm(6)"/>
 			<input type="button" value="退租" onclick="openForm(6)"/>
+			<input type="button" value="轉讓" onclick="openForm(6)"/>
+			<input type="button" value="繼承" onclick="openForm(6)"/>
 		</td>
 	</tr>
 
@@ -128,11 +130,13 @@
 			<span class="type2sp">轉帳繳款</span>
 		</td>
 		<td>
-			<span class="yessp">是</span>
+			1
 		</td>
 		<td>
 			<input type="button" value="修改" onclick="openForm(6)"/>
 			<input type="button" value="退租" onclick="openForm(6)"/>
+			<input type="button" value="轉讓" onclick="openForm(6)"/>
+			<input type="button" value="繼承" onclick="openForm(6)"/>
 		</td>
 	</tr>
 
@@ -147,11 +151,13 @@
 			<span class="type1sp">收據繳款</span>
 		</td>
 		<td>
-			<span>否</span>
+			1
 		</td>
 		<td>
 			<input type="button" value="修改" onclick="openForm(6)"/>
 			<input type="button" value="退租" onclick="openForm(6)"/>
+			<input type="button" value="轉讓" onclick="openForm(6)"/>
+			<input type="button" value="繼承" onclick="openForm(6)"/>
 		</td>
 	</tr>
 
@@ -166,11 +172,13 @@
 			<span class="type1sp">收據繳款</span>
 		</td>
 		<td>
-			<span>否</span>
+			1
 		</td>
 		<td>
 			<input type="button" value="修改" onclick="openForm(6)"/>
 			<input type="button" value="退租" onclick="openForm(6)"/>
+			<input type="button" value="轉讓" onclick="openForm(6)"/>
+			<input type="button" value="繼承" onclick="openForm(6)"/>
 		</td>
 	</tr>
 
@@ -185,11 +193,13 @@
 			<span class="type1sp">收據繳款</span>
 		</td>
 		<td>
-			<span>否</span>
+			1
 		</td>
 		<td>
 			<input type="button" value="修改" onclick="openForm(6)"/>
 			<input type="button" value="退租" onclick="openForm(6)"/>
+			<input type="button" value="轉讓" onclick="openForm(6)"/>
+			<input type="button" value="繼承" onclick="openForm(6)"/>
 		</td>
 	</tr>
 	
@@ -328,15 +338,6 @@
 					</td>
 				</tr>
 				<tr>
-					<td style="height: 26px;" class="subjecttitle">是否用舊電表：</td>
-					<td>
-						<select name="" style="width:50%">
-							<option value="">是</option>
-							<option value="">否</option>
-						</select>
-					</td>
-				</tr>
-				<tr>
 					<td style="height: 26px;" class="subjecttitle">是否有兩個電表：</td>
 					<td>
 						<select name="" style="width:50%">
@@ -346,25 +347,25 @@
 					</td>
 				</tr>
 				<tr>
+					<td style="height: 26px;" class="subjecttitle">電表一新舊：</td>
+					<td>
+						<select name="" style="width:50%">
+							<option value="">舊</option>
+							<option value="">新</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;" class="subjecttitle">電表二新舊：</td>
+					<td>
+						<select name="" style="width:50%">
+							<option value="">舊</option>
+							<option value="">新</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
 					<td style="height: 26px;" class="subjecttitle">租用人地址：</td>
-					<td>
-						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:50%;"/>
-					</td>
-				</tr>
-				<tr>
-					<td style="height: 26px;" class="subjecttitle">電表號碼1：</td>
-					<td>
-						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:50%;"/>
-					</td>
-				</tr>
-				<tr>
-					<td style="height: 26px;" class="subjecttitle">電表號碼2：</td>
-					<td>
-						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:50%;"/>
-					</td>
-				</tr>
-				<tr>
-					<td style="height: 26px;" class="subjecttitle">水表號碼：</td>
 					<td>
 						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:50%;"/>
 					</td>

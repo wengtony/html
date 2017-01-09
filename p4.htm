@@ -102,6 +102,7 @@
 	<tr>
 		<td style="width:180px">共 <span class="resultcountcs">180</span> 筆	</td>
 		<td style="text-align:right">
+			<input type="button" value="批次繳費"/>
 			<input type="button" value="批次列印繳費單"/>
 		</td>
 	</tr>
@@ -256,6 +257,12 @@
 					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>月：</td>
 					<td>
 						<input type="text" id="cid" name="vo.cid" maxlength="2" style="width:150px;"/>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;width:30%;" class="subjecttitle">上次年月：</td>
+					<td>
+						<span style="font-weight:bold">105/10</span>
 					</td>
 				</tr>
 				<tr>
@@ -500,7 +507,7 @@ $(function(){
 	var windowHeight = $(window).height()-20;
 	$("#dialog-form").dialog({
 		autoOpen: false,
-		height: 300,
+		height: 350,
 		width: '80%',
 		modal: true,
 		open: function(event, ui) {
