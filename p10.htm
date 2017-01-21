@@ -1,0 +1,560 @@
+﻿
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>menu5-臨時攤位管理</title>
+<link href="css/main.css" type="text/css" rel="stylesheet" />
+<link href="css/humanity/jquery-ui.min.css	" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="scripts/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="scripts/jquery-ui-1.12.1.min.js"></script>
+<script type="text/javascript" src="scripts/tonyutils.js"></script>
+<script type="text/javascript" src="scripts/tonyinit.js"></script>
+</head>
+
+
+
+
+<body>
+<form id="Paper" name="Paper" action="/submission/manage/Paper.xhtml" method="get">
+	<table class="searchcs" style="width:100%">
+		<tr>
+			<td class="titletd" style="height:27px">臨時攤位管理</td>
+		</tr>
+		<tr>
+			<td>
+			<table class="searchtb" style="width:100%" cellspacing="3" cellpadding="3">
+				<tr>
+					<td align="right" style="width:20%">市場名稱：</td>
+					<td style="width:30%">
+					<select name="cid" id="clst" style="width:90%">
+				    <option value="">---請選擇---</option>
+						<option value="1">北區</option>
+						<option value="2">露店</option>
+					</select>
+					</td>
+					<td style="width:20%" align="right">領用日期起迄：</td>
+					<td>
+					<input type="text" maxlength="7" style="width:120px"/> ~
+					<input type="text" maxlength="7" style="width:120px"/>	
+					<div class="notectx">(民國年月7位數)</div>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+<p />
+	<table border="0" id="table4" style="width:100%; border-collapse: collapse">
+		<tr>
+			<td align="center" style="height:30px">
+				<input type="submit" value="查詢" id="Paper_0" class="btn_bg"/>
+				<input class="btn_bg" type="button" value="重新整理" onclick="location.href='p1.htm';" />
+				<input type="button" value="新增" onclick="addOne()"/>
+			</td>
+		</tr>
+	</table>
+</form>
+
+<div>
+<div style="margin:10px; padding:10px; border:1px solid #FF8040; width:400px; float:left;">
+	領用收據號碼：
+	<span style="font-weight:bold;font-size:130%; color:#0000FF; padding-right:10px;">001801</span>～ 
+	<span style="font-weight:bold;font-size:130%; color:#0000FF; padding-right:10px;">002000</span>
+	<input type="button" value="設定收據" onclick="numSet()"/>
+</div>
+<div style="margin:10px; padding:10px; border:1px solid #FF8040; width:200px; float:left">
+	目前用到：
+	<span style="font-weight:bold;font-size:130%; color:#800000; padding-right:10px;">001843</span>
+</div>
+
+</div>
+
+<!-- 分頁模組 -->
+<table class="pagecs" border="0" style="width:100%">
+	<tr>
+		<td style="width:180px">共 <span class="resultcountcs">180</span> 筆	</td>
+		<td style="text-align:right">
+			<input type="button" value="匯出"/>
+		</td>
+	</tr>
+</table>
+<!-- 分頁模組結束 -->
+
+<div class="resultdivcs" id="layer1">
+<table class="resultcs" style="width:100%" cellpadding="3">
+	<tr class="toptitlecs">
+		<td style="width:7%; height: 31px;">日期</td>
+		<td style="width:15%;">領用收據號</td>
+		<td style="width:6%;">張數</td>
+		<td style="width:8%;">金額</td>
+		<td style="width:10%;">各市場張數</td>
+		<td style="width:10%;">作廢張數</td>
+		<td style="width:10%;">備註</td>
+		<td>動作</td>
+	</tr>
+	<tbody id="resultcs">
+	
+	<tr>
+		<td style="height: 31px;">105/01/04</td>
+		<td>001801 ~ 001803</td>
+		<td>3</td>
+		<td>120</td>
+		<td>
+			<div>北區：2</div>
+			<div>露店：1</div>
+		</td>
+		<td>0</td>
+		<td></td>
+		<td>
+			<input type="button" value="修改" onclick="openForm(6)"/>
+		</td>
+	</tr>
+
+	<tr>
+		<td style="height: 31px;">105/01/05</td>
+		<td>001801 ~ 001803</td>
+		<td>3</td>
+		<td>120</td>
+		<td>
+			<div>北區：2</div>
+			<div>露店：1</div>
+		</td>
+		<td>0</td>
+		<td></td>
+		<td>
+			<input type="button" value="修改" onclick="openForm(6)"/>
+		</td>
+	</tr>
+	<tr>
+		<td style="height: 31px;">105/01/06</td>
+		<td>001801 ~ 001803</td>
+		<td>3</td>
+		<td>120</td>
+		<td>
+			<div>北區：2</div>
+			<div>露店：1</div>
+		</td>
+		<td>0</td>
+		<td></td>
+		<td>
+			<input type="button" value="修改" onclick="openForm(6)"/>
+		</td>
+	</tr>
+	<tr>
+		<td style="height: 31px;">105/01/07</td>
+		<td>001801 ~ 001803</td>
+		<td>3</td>
+		<td>120</td>
+		<td>
+			<div>北區：2</div>
+			<div>露店：1</div>
+		</td>
+		<td>0</td>
+		<td></td>
+		<td>
+			<input type="button" value="修改" onclick="openForm(6)"/>
+		</td>
+	</tr>
+	<tr>
+		<td style="height: 31px;">105/01/08</td>
+		<td>001801 ~ 001803</td>
+		<td>3</td>
+		<td>120</td>
+		<td>
+			<div>北區：2</div>
+			<div>露店：1</div>
+		</td>
+		<td>0</td>
+		<td></td>
+		<td>
+			<input type="button" value="修改" onclick="openForm(6)"/>
+		</td>
+	</tr>
+	
+	</tbody>
+</table>
+</div>
+<!-- 分頁模組 -->
+<table class="pagecs" style="width:100%; border-collapse: collapse;" >
+	<tr style="background-color:#F0E7F1">
+		<td style="width:250px">第 <span style="color:blue">1</span> 頁</td>
+		<td style="width:200px">&nbsp;</td>
+		<td style="width:20px" align="right"> </td>
+		<td id="linkpage" style="text-align:center">
+		
+		
+		
+		<a href="/submission/manage/Paper.xhtml?pagenum=1">1</a>&nbsp;
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		</td>
+		<td style="width:20px"></td>
+	</tr>
+</table>
+<!-- 分頁模組結束 -->
+
+
+<script type="text/javascript" src="scripts/tonyrow.js"></script>
+
+<!-- form -->
+<div id="dialog-form" style="display:none; font-size:96%;" title="編輯">
+	<form id="frm">
+			<table class="searchtb" style="width:100%" cellpadding="3">
+				<tr>
+					<td style="height: 26px;width:30%;" class="subjecttitle"><span class="mustkeyin">* </span>民國年月日：</td>
+					<td>
+						<input type="text" id="cid" name="vo.cid" maxlength="3" style="width:150px;"/>
+						<input type="hidden" id="sid" name="vo.sid"/>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>領用張數：</td>
+					<td>
+						<input type="text" id="cid" name="vo.cid" maxlength="2" style="width:150px;"/> 張
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;" class="subjecttitle">作廢：</td>
+					<td>
+						<input type="text" id="cid" name="vo.cid" maxlength="2" style="width:150px;"/> 張
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;" class="subjecttitle">作廢號碼：</td>
+					<td>
+						<input type="text" id="cid" name="vo.cid" maxlength="2" style="width:90%;" value="1"/>
+						<div class="notectx" style="margin-top:3px;">(半形逗點隔開, 例如:001801,001803)</div>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;width:30%;" class="subjecttitle">領用收據：</td>
+					<td>
+						<input type="text" id="snum" style="font-weight:bold; color:#0000FF; width:100px;"/> ~
+						<input type="text" id="enum" style="font-weight:bold; color:#0000FF; width:100px;"/>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;width:30%; vertical-align:top;" class="subjecttitle">市場：</td>
+					<td>
+						<div style="margin-bottom:10px;">北區市場：<input type="text" id="cid" name="vo.cid" maxlength="2" style="width:150px;"/> 張</div>
+						<div style="margin-bottom:10px;">露店：<input type="text" id="cid" name="vo.cid" maxlength="2" style="width:150px;"/> 張</div>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;width:30%;" class="subjecttitle">備註：</td>
+					<td>
+						<input type="text" id="cid" name="vo.cid" maxlength="100" style="width:90%;"/>
+					</td>
+				</tr>
+			</table>
+	</form>
+</div>
+
+<!-- form2 -->
+<div id="dialog-form2" style="display:none; font-size:96%;" title="編輯">
+	<form id="frm2">
+			<table class="searchtb" style="width:100%" cellpadding="3">
+				<tr>
+					<td style="height: 26px;width:30%;" class="subjecttitle"><span class="mustkeyin">* </span>民國年：</td>
+					<td>
+						<input type="text" id="cid" name="vo.cid" maxlength="3" style="width:150px;"/>
+						<span class="notectx">(3位數)</span>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>月：</td>
+					<td>
+						<input type="text" id="cid" name="vo.cid" maxlength="2" style="width:150px;"/>
+						<span class="notectx">(2位數)</span>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>流水號：</td>
+					<td>
+						<input type="text" id="cid" name="vo.cid" maxlength="2" style="width:150px;"/>
+						<span class="notectx">(4位數)</span>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;" class="subjecttitle">編號呈現：</td>
+					<td>
+						<span id="num2" style="font-weight:bold;font-size:130%; color:#0000FF;"></span>
+					</td>
+				</tr>
+			</table>
+	</form>
+</div>
+
+<!-- form 3-->
+<div id="dialog-form3" style="display:none; font-size:96%;" title="編輯">
+	<form id="frm3">
+			<table class="searchtb" style="width:100%" cellpadding="3">
+				<tr>
+					<td style="height: 26px;width:30%;" class="subjecttitle">市場名稱：</td>
+					<td>
+						<span style="font-weight:bold">中央第一市場</span>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;width:30%;" class="subjecttitle">收取年月：</td>
+					<td>
+						<span style="font-weight:bold">105/12</span>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>繳款方式：</td>
+					<td>
+						<select name="" style="width:150px">
+							<option value="">尚未繳款</option>
+							<option value="">已繳款</option>
+							<option value="">其他</option>
+						</select>
+						<input type="text" maxlength="30" value=""/>
+					</td>
+				</tr>
+			</table>
+	</form>
+</div>
+<script type="text/javascript">
+
+function addOne() {
+	$('#frm').find('input[type=text], select, textarea').val('');
+	$('#snum').val('001843');
+	$('#enum').val('001843');
+	$('#dialog-form').dialog('option', 'title', '新增');
+	var btns = {};
+	btns['新增'] = function() {
+		bb = validateAll();
+		if (!bb) {
+			return bb;
+		}
+		if(bb){
+			if($('#cid').val()==''){
+				alert('請輸入課程代碼!');
+				bb = false;
+				return bb;
+			}
+		}
+		if(bb){
+			if($('#cname').val()==''){
+				alert('請輸入課程名稱!');
+				bb = false;
+				return bb;
+			}
+		}
+		var frm = $('#frm');
+		var params = frm.serialize();
+		var actstr = 'CourseAjax!add.action';
+		$(".ui-dialog-buttonpane button:contains('新增')").button("disable");
+		$.ajax({
+			type: "POST",
+			url: actstr,
+			data: params
+		}).done(function(data) {
+			var msg = data['msg'];
+			if (msg.indexOf('ok') >= 0) {
+				alert('已新增!');
+				window.location.reload();
+			}
+			else {
+				alert(msg);
+				$(".ui-dialog-buttonpane button:contains('新增')").button("enable");
+				$('#dialog-form').dialog("close");
+			}
+		});
+	};
+	btns['取消'] = function() {
+		$('#dialog-form').dialog("close");
+	};
+			
+	$('#dialog-form').dialog('option', 'buttons', btns);
+	$('#dialog-form').dialog('open');
+}	
+
+function numSet() {
+	$('#frm2').find('input[type=text], select, textarea').val('');
+	$('#dialog-form2').dialog('option', 'title', '設定收據編號');
+	var btns = {};
+	btns['設定'] = function() {
+		bb = validateAll();
+		if (!bb) {
+			return bb;
+		}
+		if(bb){
+			if($('#cid').val()==''){
+				alert('請輸入課程代碼!');
+				bb = false;
+				return bb;
+			}
+		}
+		if(bb){
+			if($('#cname').val()==''){
+				alert('請輸入課程名稱!');
+				bb = false;
+				return bb;
+			}
+		}
+		var frm = $('#frm2');
+		var params = frm.serialize();
+		var actstr = 'CourseAjax!add.action';
+		$(".ui-dialog-buttonpane button:contains('設定')").button("disable");
+		$.ajax({
+			type: "POST",
+			url: actstr,
+			data: params
+		}).done(function(data) {
+			var msg = data['msg'];
+			if (msg.indexOf('ok') >= 0) {
+				alert('已新增!');
+				window.location.reload();
+			}
+			else {
+				alert(msg);
+				$(".ui-dialog-buttonpane button:contains('設定')").button("enable");
+				$('#dialog-form2').dialog("close");
+			}
+		});
+	};
+	btns['取消'] = function() {
+		$('#dialog-form2').dialog("close");
+	};
+			
+	$('#dialog-form2').dialog('option', 'buttons', btns);
+	$('#dialog-form2').dialog('open');
+}	
+
+function batchFix() {
+	$('#frm3').find('input[type=text], select, textarea').val('');
+	$('#dialog-form3').dialog('option', 'title', '批次修改');
+	var btns = {};
+	btns['修改'] = function() {
+		bb = validateAll();
+		if (!bb) {
+			return bb;
+		}
+		if(bb){
+			if($('#cid').val()==''){
+				alert('請輸入課程代碼!');
+				bb = false;
+				return bb;
+			}
+		}
+		if(bb){
+			if($('#cname').val()==''){
+				alert('請輸入課程名稱!');
+				bb = false;
+				return bb;
+			}
+		}
+		var frm = $('#frm3');
+		var params = frm.serialize();
+		var actstr = 'CourseAjax!add.action';
+		$(".ui-dialog-buttonpane button:contains('修改')").button("disable");
+		$.ajax({
+			type: "POST",
+			url: actstr,
+			data: params
+		}).done(function(data) {
+			var msg = data['msg'];
+			if (msg.indexOf('ok') >= 0) {
+				alert('已新增!');
+				window.location.reload();
+			}
+			else {
+				alert(msg);
+				$(".ui-dialog-buttonpane button:contains('修改')").button("enable");
+				$('#dialog-form3').dialog("close");
+			}
+		});
+	};
+	btns['取消'] = function() {
+		$('#dialog-form3').dialog("close");
+	};
+			
+	$('#dialog-form3').dialog('option', 'buttons', btns);
+	$('#dialog-form3').dialog('open');
+}	
+
+function fixFee(){
+	//check textfield
+	var lng = $('.fee').find('input').length;
+	if(lng==0){
+		var txt = '<input type="text" style="width:90%" value="?1" tabindex="?2"/>';
+		$('.fee').each(function(idx){
+			var v = $(this).text();
+			var tt = txt;
+			tt = tt.replace('?1', v);
+			tt = tt.replace('?2', (idx+1));
+			$(this).html(tt);
+		});
+	}
+	else{
+		$('.fee').each(function(idx){
+			var v = $(this).find('input').val();
+			$(this).html(v);
+		});
+	}
+}
+
+$(function(){
+	var windowHeight = $(window).height()-20;
+	$("#dialog-form").dialog({
+		autoOpen: false,
+		height: windowHeight-20,
+		width: '80%',
+		modal: true,
+		open: function(event, ui) {
+		},
+		beforeClose: function(event, ui) {
+		}
+	});
+	
+	$("#dialog-form").bind( "clickoutside", function(event){
+		$(this).hide();
+	});
+
+	$("#dialog-form2").dialog({
+		autoOpen: false,
+		height: 300,
+		width: '50%',
+		modal: true,
+		open: function(event, ui) {
+		},
+		beforeClose: function(event, ui) {
+		}
+	});
+	
+	$("#dialog-form2").bind( "clickoutside", function(event){
+		$(this).hide();
+	});
+	
+	$("#dialog-form3").dialog({
+		autoOpen: false,
+		height: 300,
+		width: '50%',
+		modal: true,
+		open: function(event, ui) {
+		},
+		beforeClose: function(event, ui) {
+		}
+	});
+	
+	$("#dialog-form3").bind( "clickoutside", function(event){
+		$(this).hide();
+	});
+
+});
+</script>
+</body>
+
+</html>

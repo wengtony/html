@@ -580,3 +580,27 @@ font.resultcountcs {
 .openlink{
 	color: #97150F;
 }
+.feetp1 {
+	padding:3px;
+	color:#FFFFFF;
+  background-color:#6811DF;
+	-webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: #CCC 0 0 .25em;
+  -moz-box-shadow: #CCC 0 0 .25em;
+  /* box-shadow: #CCC 0 0 .25em;
+  behavior: url(PIE.htc); */
+}
+.feetp2 {
+	padding:3px;
+	color:#FFFFFF;
+  background-color:#FF5706;
+	-webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: #CCC 0 0 .25em;
+  -moz-box-shadow: #CCC 0 0 .25em;
+  /* box-shadow: #CCC 0 0 .25em;
+  behavior: url(PIE.htc);*/
+}
