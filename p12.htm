@@ -5,7 +5,7 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>menu1-鋪位租用管理</title>
+<title>menu16-廣告看板租用管理</title>
 <link href="css/main.css" type="text/css" rel="stylesheet" />
 <link href="css/humanity/jquery-ui.min.css	" type="text/css" rel="stylesheet" />
 <script type="text/javascript" src="scripts/jquery-1.12.4.min.js"></script>
@@ -21,7 +21,7 @@
 <form id="Paper" name="Paper" action="/submission/manage/Paper.xhtml" method="get">
 	<table class="searchcs" style="width:100%">
 		<tr>
-			<td class="titletd" style="height:27px">鋪位租用管理</td>
+			<td class="titletd" style="height:27px">廣告看板租用管理</td>
 		</tr>
 		<tr>
 			<td>
@@ -31,11 +31,7 @@
 					<td style="width:30%">
 					
 					<select name="cid" id="clst" style="width:90%">
-    <option value="">---請選擇---</option>
-    <option value="1">中央第一市場</option>
-		<option value="2">中央第二市場</option>
-		<option value="2">中央第三市場</option>
-		<option value="2">中央第四市場</option>
+    <option value="">西區市場</option>
 </select>
 					</td>
 					<td style="width:20%" align="right">租用人：</td>
@@ -51,8 +47,9 @@
 					<td style="width:20%" align="right">承租狀態：</td>
 					<td>
 					<select name="cid" id="clst" style="width:90%">
-    <option value="">承租中</option>
-    <option value="1">退租</option>
+    <option value="">---請選擇---</option>
+    <option value="1">承租中</option>
+    <option value="2">退租</option>
 					</td>
 				</tr>
 				</table>
@@ -90,10 +87,12 @@
 		<td style="width:10%;">市場名稱</td>
 		<td style="width:8%;">鋪位類別</td>
 		<td style="width:6%;">鋪號</td>
-		<td style="width:9%;">租用人</td>
-		<td style="width:9%;">承租日期</td>
-		<td style="width:13%;">租/電/水 繳款方式</td>
-		<td style="width:8%;">電表數</td>
+		<td style="width:6%;">租用人</td>
+		<td style="width:5%;">位置</td>
+		<td style="width:15%;">承租日期</td>
+		<td style="width:7%;">租期 (月)</td>
+		<td style="width:7%;">金額</td>
+		<td style="width:8%;">狀態</td>
 		<td>動作</td>
 	</tr>
 	<tbody id="resultcs">
@@ -104,20 +103,17 @@
 		<td>飲食</td>
 		<td>01</td>
 		<td>劉鴻世</td>
-		<td>105/01/01</td>
 		<td>
-			<span class="feetp1">轉</span>
-			<span class="feetp2">收</span>
-			<span class="feetp2">收</span>
+			A
 		</td>
+		<td>105/01/01 ~ 105/03/31</td>
+		<td>3</td>
+		<td>3,000</td>
 		<td>
-			1
+			<span class="yessp">承租中</span>
 		</td>
 		<td>
 			<input type="button" value="修改" onclick="openForm(6)"/>
-			<input type="button" value="退租" onclick="openForm(6)"/>
-			<input type="button" value="轉讓" onclick="openForm(6)"/>
-			<input type="button" value="繼承" onclick="openForm(6)"/>
 		</td>
 	</tr>
 
@@ -127,20 +123,17 @@
 		<td>飲食</td>
 		<td>02</td>
 		<td>劉鴻世</td>
-		<td>105/01/01</td>
 		<td>
-			<span class="feetp1">轉</span>
-			<span class="feetp1">轉</span>
-			<span class="feetp2">收</span>
+			B
 		</td>
+		<td>105/01/01 ~ 105/03/31</td>
+		<td>3</td>
+		<td>3,000</td>
 		<td>
-			1
+			<span class="yessp">承租中</span>
 		</td>
 		<td>
 			<input type="button" value="修改" onclick="openForm(6)"/>
-			<input type="button" value="退租" onclick="openForm(6)"/>
-			<input type="button" value="轉讓" onclick="openForm(6)"/>
-			<input type="button" value="繼承" onclick="openForm(6)"/>
 		</td>
 	</tr>
 
@@ -150,20 +143,17 @@
 		<td>飲食</td>
 		<td>03</td>
 		<td>劉鴻世</td>
-		<td>105/01/01</td>
 		<td>
-			<span class="feetp1">轉</span>
-			<span class="feetp1">轉</span>
-			<span class="feetp1">轉</span>
+			C
 		</td>
+		<td>105/01/01 ~ 105/03/31</td>
+		<td>3</td>
+		<td>3,000</td>
 		<td>
-			1
+			<span class="yessp">承租中</span>
 		</td>
 		<td>
 			<input type="button" value="修改" onclick="openForm(6)"/>
-			<input type="button" value="退租" onclick="openForm(6)"/>
-			<input type="button" value="轉讓" onclick="openForm(6)"/>
-			<input type="button" value="繼承" onclick="openForm(6)"/>
 		</td>
 	</tr>
 
@@ -173,20 +163,17 @@
 		<td>飲食</td>
 		<td>04</td>
 		<td>劉鴻世</td>
-		<td>105/01/01</td>
 		<td>
-			<span class="feetp2">收</span>
-			<span class="feetp2">收</span>
-			<span class="feetp2">收</span>
+			D
 		</td>
+		<td>105/01/01 ~ 105/03/31</td>
+		<td>3</td>
+		<td>3,000</td>
 		<td>
-			1
+			<span class="yessp">承租中</span>
 		</td>
 		<td>
 			<input type="button" value="修改" onclick="openForm(6)"/>
-			<input type="button" value="退租" onclick="openForm(6)"/>
-			<input type="button" value="轉讓" onclick="openForm(6)"/>
-			<input type="button" value="繼承" onclick="openForm(6)"/>
 		</td>
 	</tr>
 
@@ -196,20 +183,17 @@
 		<td>飲食</td>
 		<td>05</td>
 		<td>劉鴻世</td>
-		<td>105/01/01</td>
 		<td>
-			<span class="feetp2">收</span>
-			<span class="feetp1">轉</span>
-			<span class="feetp1">轉</span>
+			A
 		</td>
+		<td>105/01/01 ~ 105/03/31</td>
+		<td>3</td>
+		<td>3,000</td>
 		<td>
-			1
+			<span class="nosp">退租</span>
 		</td>
 		<td>
 			<input type="button" value="修改" onclick="openForm(6)"/>
-			<input type="button" value="退租" onclick="openForm(6)"/>
-			<input type="button" value="轉讓" onclick="openForm(6)"/>
-			<input type="button" value="繼承" onclick="openForm(6)"/>
 		</td>
 	</tr>
 	
@@ -261,148 +245,102 @@
 						</select>
 					</td>
 				</tr>
-				</tr>
 				<tr>
-					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>底冊號碼：</td>
+					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>使用位置：</td>
 					<td>
-						<select name="" style="width:150px;">
-							<option value="">1002</option>
-							<option value="">1015</option>
-						</select>
+						<label><input type="radio" name="addr" value="A"/> A</label>
+						<label><input type="radio" name="addr" value="B"/> B</label>
+						<label><input type="radio" name="addr" value="C"/> C</label>
+						<label><input type="radio" name="addr" value="D"/> D</label>
+						<label><input type="radio" name="addr" value="E"/> E</label>
+						<label><input type="radio" name="addr" value="F"/> F</label>
+						<label><input type="radio" name="addr" value="G"/> G</label>
+						<label><input type="radio" name="addr" value="H"/> H</label>
+						<label><input type="radio" name="addr" value="I"/> I</label>
+						<label><input type="radio" name="addr" value="J"/> J</label>
 					</td>
 				</tr>
 				<tr>
-					<td style="height: 26px;width:30%;" class="subjecttitle">鋪號：</td>
-					<td>
-						24
-					</td>
-				</tr>
-				<tr>
-					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>鋪位類別：</td>
-					<td>
-						<select name="" style="width:150px;">
-							<option value="">飲食</option>
-							<option value="">美髮</option>
-						</select>
-					</td>
-				<tr>
-					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>開始租用日：</td>
+					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>申請日期：</td>
 					<td>
 						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:150px;"/>
 						<span class="notectx">(民國年月日7位)</span>
 					</td>
 				</tr>
 				<tr>
-					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>租用人：</td>
+					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>底冊號碼：</td>
+					<td>
+						<select name="" style="width:150px;">
+							<option value="">1001</option>
+							<option value="">1002</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>申請人：</td>
 					<td>
 						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:150px;"/>
 					</td>
 				</tr>
 				<tr>
-					<td style="height: 26px;" class="subjecttitle">租用人電話：</td>
+					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>連絡電話：</td>
 					<td>
 						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:150px;"/>
 					</td>
 				</tr>
 				<tr>
-					<td style="height: 26px;" class="subjecttitle">租用人手機：</td>
+					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>使用期間起：</td>
 					<td>
 						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:150px;"/>
+						<span class="notectx">(民國年月日7位)</span>
 					</td>
 				</tr>
 				<tr>
-					<td style="height: 26px;" class="subjecttitle">租用人地址：</td>
+					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>使用期間迄：</td>
+					<td>
+						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:150px;"/>
+						<span class="notectx">(民國年月日7位)</span>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;" class="subjecttitle">租期：</td>
+					<td>
+						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:50px;"/> 個月
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;" class="subjecttitle">廣告文宣樣稿：</td>
+					<td>
+						<select name="" style="width:150px;">
+							<option value="">已檢附</option>
+							<option value="">未檢附</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;" class="subjecttitle">用途說明：</td>
 					<td>
 						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:50%;"/>
 					</td>
 				</tr>
 				<tr>
-					<td style="height: 26px;" class="subjecttitle">租金繳款方式：</td>
+					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>每月租金：</td>
+					<td>
+						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:150px;"/> 元
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>應繳租金：</td>
+					<td>
+						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:150px;"/> 元
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;" class="subjecttitle">承租狀態：</td>
 					<td>
 						<select name="" style="width:150px;">
-							<option value="">收據繳款</option>
-							<option value="">轉帳繳款</option>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<td style="height: 26px;" class="subjecttitle">電費繳款方式：</td>
-					<td>
-						<select name="" style="width:150px;">
-							<option value="">收據繳款</option>
-							<option value="">轉帳繳款</option>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<td style="height: 26px;" class="subjecttitle">水費繳款方式：</td>
-					<td>
-						<select name="" style="width:150px;">
-							<option value="">收據繳款</option>
-							<option value="">轉帳繳款</option>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<td style="height: 26px;" class="subjecttitle">轉帳扣帳帳號：</td>
-					<td>
-						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:50%;"/>
-					</td>
-				</tr>
-				<tr>
-					<td style="height: 26px;" class="subjecttitle">轉帳人姓名：</td>
-					<td>
-						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:150px;"/>
-					</td>
-				</tr>
-				<tr>
-					<td style="height: 26px;" class="subjecttitle">轉帳人身份證：</td>
-					<td>
-						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:150px;"/>
-					</td>
-				</tr>
-				<tr>
-					<td style="height: 26px;" class="subjecttitle">轉帳人電話：</td>
-					<td>
-						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:150px;"/>
-					</td>
-				</tr>
-				<tr>
-					<td style="height: 26px;" class="subjecttitle">轉帳人手機：</td>
-					<td>
-						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:150px;"/>
-					</td>
-				</tr>
-				<tr>
-					<td style="height: 26px;" class="subjecttitle">轉帳人地址：</td>
-					<td>
-						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:50%;"/>
-					</td>
-				</tr>
-				<tr>
-					<td style="height: 26px;" class="subjecttitle">電表數：</td>
-					<td>
-						<select name="" style="width:150px;">
-							<option value="">1</option>
-							<option value="">2</option>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<td style="height: 26px;" class="subjecttitle">電表一新舊：</td>
-					<td>
-						<select name="" style="width:150px;">
-							<option value="">舊</option>
-							<option value="">新</option>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<td style="height: 26px;" class="subjecttitle">電表二新舊：</td>
-					<td>
-						<select name="" style="width:150px;">
-							<option value="">舊</option>
-							<option value="">新</option>
+							<option value="">承租中</option>
+							<option value="0">退租</option>
 						</select>
 					</td>
 				</tr>
@@ -417,7 +355,7 @@ function addOne() {
 	$('#updtr').hide();
 	$('#sid').val('');
 	$('#tid').val('');
-	$('#dialog-form').dialog('option', 'title', '新增鋪位租用');
+	$('#dialog-form').dialog('option', 'title', '新增廣告看板租用');
 	var btns = {};
 	btns['新增'] = function() {
 		bb = validateAll();

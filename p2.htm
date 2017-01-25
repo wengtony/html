@@ -116,11 +116,12 @@
 		<td style="width:6%;">收取年月</td>
 		<td style="width:8%;">收據編號</td>
 		<td style="width:9%;">繳費日 <input type="button" value="編" onclick="fixFee()"/></td>
-		<td style="width:7%;">使用費</td>
-		<td style="width:7%;">清傑費</td>
-		<td style="width:7%;">遲延費</td>
-		<td style="width:7%;">總額</td>
-		<td style="width:7%;">繳費狀態</td>
+		<td style="width:6%;">使用費</td>
+		<td style="width:6%;">清傑費</td>
+		<td style="width:6%;">遲延費</td>
+		<td style="width:6%;">總額</td>
+		<td style="width:7%;">繳費方式</td>
+		<td style="width:7%;">狀態</td>
 		<td>動作</td>
 	</tr>
 	<tbody id="resultcs">
@@ -138,8 +139,9 @@
 		<td class="fee2"></td>
 		<td class="fee3"></td>
 		<td class="fee4">2000</td>
+		<td><span class="feetp1">轉</span></td>
 		<td>
-			<span class="nosp">尚未繳款</span>
+			<span class="nosp">未繳</span>
 		</td>
 		<td>
 			<input type="button" value="繳費" onclick="openForm(6)"/>
@@ -161,8 +163,9 @@
 		<td class="fee2"></td>
 		<td class="fee3"></td>
 		<td class="fee4">2000</td>
+		<td><span class="feetp2">收</span></td>
 		<td>
-			<span class="yessp">已繳款</span>
+			<span class="yessp">已繳</span>
 		</td>
 		<td>
 			<input type="button" value="取消" onclick="openForm(6)"/>
@@ -184,8 +187,9 @@
 		<td class="fee2"></td>
 		<td class="fee3"></td>
 		<td class="fee4">2000</td>
+		<td><span class="feetp1">轉</span></td>
 		<td>
-			<span class="type3sp">其他:xxx</span>
+			<span class="type3sp">其他</span>
 		</td>
 		<td>
 			<input type="button" value="繳費" onclick="openForm(6)"/>
@@ -207,8 +211,9 @@
 		<td class="fee2"></td>
 		<td class="fee3"></td>
 		<td class="fee4">2000</td>
+		<td><span class="feetp1">轉</span></td>
 		<td>
-			<span class="nosp">尚未繳款</span>
+			<span class="nosp">未繳</span>
 		</td>
 		<td>
 			<input type="button" value="繳費" onclick="openForm(6)"/>
@@ -230,8 +235,9 @@
 		<td class="fee2"></td>
 		<td class="fee3"></td>
 		<td class="fee4">2000</td>
+		<td><span class="feetp1">轉</span></td>
 		<td>
-			<span class="nosp">尚未繳款</span>
+			<span class="nosp">未繳</span>
 		</td>
 		<td>
 			<input type="button" value="繳費" onclick="openForm(6)"/>

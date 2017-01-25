@@ -5,7 +5,7 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>menu7-類別維護</title>
+<title>menu15-鋪位維護</title>
 <link href="css/main.css" type="text/css" rel="stylesheet" />
 <link href="css/humanity/jquery-ui.min.css	" type="text/css" rel="stylesheet" />
 <script type="text/javascript" src="scripts/jquery-1.12.4.min.js"></script>
@@ -21,11 +21,41 @@
 <form id="Paper" name="Paper" action="/submission/manage/Paper.xhtml" method="get">
 	<table class="searchcs" style="width:100%">
 		<tr>
-			<td class="titletd" style="height:27px">類別維護</td>
+			<td class="titletd" style="height:27px">鋪位維護</td>
 		</tr>
 		<tr>
 			<td>
-			
+			<table class="searchtb" style="width:100%" cellspacing="3" cellpadding="3">
+				<tr>
+					<td align="right" style="width:20%">市場名稱：</td>
+					<td style="width:30%">
+					
+					<select name="cid" id="clst" style="width:90%">
+    <option value="1">中央第一市場</option>
+		<option value="2">中央第二市場</option>
+		<option value="2">中央第三市場</option>
+		<option value="2">中央第四市場</option>
+</select>
+					</td>
+					<td style="width:20%" align="right">是否使用：</td>
+					<td>
+					<select name="cid" id="clst" style="width:90%">
+				    <option value="">---請選擇---</option>
+				    <option value="1">是</option>
+				    <option value="1">否</option>
+    			</select>
+					</td>
+				</tr>
+				<tr>
+					<td align="right" style="width:20%">底冊號碼：</td>
+					<td style="width:30%">
+						<input type="text" maxlength="10" style="width:90%"/>
+					</td>
+					<td style="width:20%" align="right"></td>
+					<td>
+					</td>
+				</tr>
+				</table>
 			</td>
 		</tr>
 	</table>
@@ -33,6 +63,8 @@
 	<table border="0" id="table4" style="width:100%; border-collapse: collapse">
 		<tr>
 			<td align="center" style="height:30px">
+				<input type="submit" value="查詢" id="Paper_0" class="btn_bg"/>
+				<input class="btn_bg" type="button" value="重新整理" onclick="location.href='p1.htm';" />
 				<input type="button" value="新增" id="Paper_0" class="btn_bg" onclick="addOne()"/>
 			</td>
 		</tr>
@@ -46,7 +78,7 @@
 <!-- 分頁模組 -->
 <table class="pagecs" border="0" style="width:100%">
 	<tr>
-		<td>共 <span class="resultcountcs">20</span> 筆	</td>
+		<td>共 <span class="resultcountcs">180</span> 筆	</td>
 	</tr>
 </table>
 <!-- 分頁模組結束 -->
@@ -54,18 +86,27 @@
 <div class="resultdivcs" id="layer1">
 <table class="resultcs" style="width:100%" cellpadding="3">
 	<tr class="toptitlecs">
-		<td style="width:6%; height: 31px;">編號</td>
-		<td style="width:10%;">類別名稱</td>
-		<td style="width:7%;">是否使用</td>
+		<td style="width:8%; height: 31px;">底冊號碼</td>
+		<td style="width:10%;">市場名稱</td>
+		<td style="width:6%;">鋪號</td>
+		<td style="width:9%;">面積</td>
+		<td style="width:9%;">使用費</td>
+		<td style="width:13%;">清潔費</td>
+		<td style="width:8%;">是否使用</td>
 		<td>動作</td>
 	</tr>
 	<tbody id="resultcs">
 	
 	<tr>
-		<td style="height: 31px;">01</td>
-		<td>百貨</td>
+		<td style="height: 31px;">1001</td>
+		<td>中央第一市場</td>
+		<td>1</td>
+		<td>4.494</td>
+		<td>2010</td>
+		<td>80</td>
 		<td>
 			<span class="yessp">是</span>
+			<span class="nosp">否</span>
 		</td>
 		<td>
 			<input type="button" value="修改" onclick="openForm(6)"/>
@@ -73,10 +114,15 @@
 	</tr>
 
 	<tr>
-		<td style="height: 31px;">02</td>
-		<td>飲食</td>
+		<td style="height: 31px;">1002</td>
+		<td>中央第一市場</td>
+		<td>2</td>
+		<td>4.494</td>
+		<td>2010</td>
+		<td>80</td>
 		<td>
 			<span class="yessp">是</span>
+			<span class="nosp">否</span>
 		</td>
 		<td>
 			<input type="button" value="修改" onclick="openForm(6)"/>
@@ -84,10 +130,15 @@
 	</tr>
 
 	<tr>
-		<td style="height: 31px;">03</td>
-		<td>雜貨</td>
+		<td style="height: 31px;">1003</td>
+		<td>中央第一市場</td>
+		<td>3</td>
+		<td>4.494</td>
+		<td>2010</td>
+		<td>80</td>
 		<td>
 			<span class="yessp">是</span>
+			<span class="nosp">否</span>
 		</td>
 		<td>
 			<input type="button" value="修改" onclick="openForm(6)"/>
@@ -95,10 +146,15 @@
 	</tr>
 
 	<tr>
-		<td style="height: 31px;">04</td>
-		<td>疏菜</td>
+		<td style="height: 31px;">1004</td>
+		<td>中央第一市場</td>
+		<td>4</td>
+		<td>4.494</td>
+		<td>2010</td>
+		<td>80</td>
 		<td>
 			<span class="yessp">是</span>
+			<span class="nosp">否</span>
 		</td>
 		<td>
 			<input type="button" value="修改" onclick="openForm(6)"/>
@@ -106,10 +162,15 @@
 	</tr>
 
 	<tr>
-		<td style="height: 31px;">05</td>
-		<td>鮮果</td>
+		<td style="height: 31px;">1005</td>
+		<td>中央第一市場</td>
+		<td>5</td>
+		<td>4.494</td>
+		<td>2010</td>
+		<td>80</td>
 		<td>
 			<span class="yessp">是</span>
+			<span class="nosp">否</span>
 		</td>
 		<td>
 			<input type="button" value="修改" onclick="openForm(6)"/>
@@ -119,7 +180,35 @@
 	</tbody>
 </table>
 </div>
+<!-- 分頁模組 -->
 
+
+
+<!-- 分頁模組 -->
+<table class="pagecs" style="width:100%; border-collapse: collapse;" >
+	<tr style="background-color:#F0E7F1">
+		<td style="width:250px">第 <span style="color:blue">1</span> 頁</td>
+		<td style="width:200px">&nbsp;</td>
+		<td style="width:20px" align="right"> </td>
+		<td id="linkpage" style="text-align:center">
+		
+		
+		
+		<a href="/submission/manage/Paper.xhtml?pagenum=1">1</a>&nbsp;
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		</td>
+		<td style="width:20px"></td>
+	</tr>
+</table>
+<!-- 分頁模組結束 -->
 
 <script type="text/javascript" src="scripts/tonyrow.js"></script>
 
@@ -128,22 +217,49 @@
 	<form id="frm">
 			<table class="searchtb" style="width:100%" cellpadding="3">
 				<tr>
-					<td style="height: 26px;width:30%;" class="subjecttitle"><span class="mustkeyin">* </span>編號：</td>
+					<td style="height: 26px;width:30%;" class="subjecttitle"><span class="mustkeyin">* </span>底冊號碼：</td>
 					<td>
 						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:150px;"/>
 						<input type="hidden" id="sid" name="vo.sid"/>
 					</td>
 				</tr>
 				<tr>
-					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>類別名稱：</td>
+					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>市場名稱：</td>
 					<td>
-						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:50%;"/>
+						<select name="" style="width:150px">
+							<option value="">中央第一市場</option>
+							<option value="">中央第二市場</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>鋪號：</td>
+					<td>
+						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:150px;"/>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;" class="subjecttitle">鋪位面積：</td>
+					<td>
+						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:150px;"/>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;" class="subjecttitle">使用費：</td>
+					<td>
+						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:150px;"/>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;" class="subjecttitle">清潔費：</td>
+					<td>
+						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:150px;"/>
 					</td>
 				</tr>
 				<tr>
 					<td style="height: 26px;" class="subjecttitle">是否使用：</td>
 					<td>
-						<select name="" style="width:50%">
+						<select name="" style="width:150px;">
 							<option value="">是</option>
 							<option value="">否</option>
 						</select>
@@ -160,7 +276,7 @@ function addOne() {
 	$('#updtr').hide();
 	$('#sid').val('');
 	$('#tid').val('');
-	$('#dialog-form').dialog('option', 'title', '新增鋪位類別');
+	$('#dialog-form').dialog('option', 'title', '新增鋪位');
 	var btns = {};
 	btns['新增'] = function() {
 		bb = validateAll();
@@ -213,8 +329,8 @@ $(function(){
 	var windowHeight = $(window).height()-20;
 	$("#dialog-form").dialog({
 		autoOpen: false,
-		height: 300,
-		width: 500,
+		height: windowHeight,
+		width: '98%',
 		modal: true,
 		open: function(event, ui) {
 		},

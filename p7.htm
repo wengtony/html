@@ -56,12 +56,13 @@
 	<tr class="toptitlecs">
 		<td style="width:6%; height: 31px;">編號</td>
 		<td style="width:10%;">市場名稱</td>
-		<td style="width:7%;">電基本費</td>
-		<td style="width:7%;">夏季單價</td>
-		<td style="width:7%;">冬季單價</td>
-		<td style="width:7%;">水基本費</td>
-		<td style="width:7%;">水單價</td>
-		<td style="width:7%;">清潔單價</td>
+		<td style="width:7%;">電基本費/月</td>
+		<td style="width:7%;">夏季單價/度</td>
+		<td style="width:7%;">冬季單價/度</td>
+		<td style="width:7%;">電加權</td>
+		<td style="width:7%;">水基本費/月</td>
+		<td style="width:7%;">水單價/度</td>
+		<td style="width:7%;">清潔單價/度</td>
 		<td style="width:7%;">是否使用</td>
 		<td>動作</td>
 	</tr>
@@ -70,10 +71,11 @@
 	<tr>
 		<td style="height: 31px;">01</td>
 		<td>中央第一市場</td>
-		<td>0.00</td>
+		<td>0</td>
 		<td>0.000</td>
 		<td>0.000</td>
-		<td>0.0000</td>
+		<td>0.000</td>
+		<td>0</td>
 		<td>0.00</td>
 		<td>0.000</td>
 		<td>
@@ -87,10 +89,11 @@
 	<tr>
 		<td style="height: 31px;">02</td>
 		<td>中央第二市場</td>
-		<td>0.00</td>
+		<td>0</td>
 		<td>0.000</td>
 		<td>0.000</td>
-		<td>0.0000</td>
+		<td>0.000</td>
+		<td>0</td>
 		<td>0.00</td>
 		<td>0.000</td>
 		<td>
@@ -104,10 +107,11 @@
 	<tr>
 		<td style="height: 31px;">03</td>
 		<td>中央第三市場</td>
-		<td>0.00</td>
+		<td>0</td>
 		<td>0.000</td>
 		<td>0.000</td>
-		<td>0.0000</td>
+		<td>0.000</td>
+		<td>0</td>
 		<td>0.00</td>
 		<td>0.000</td>
 		<td>
@@ -121,10 +125,11 @@
 	<tr>
 		<td style="height: 31px;">04</td>
 		<td>中央第四市場</td>
-		<td>0.00</td>
+		<td>0</td>
 		<td>0.000</td>
 		<td>0.000</td>
-		<td>0.0000</td>
+		<td>0.000</td>
+		<td>0</td>
 		<td>0.00</td>
 		<td>0.000</td>
 		<td>
@@ -138,10 +143,11 @@
 	<tr>
 		<td style="height: 31px;">05</td>
 		<td>露店</td>
-		<td>0.00</td>
+		<td>0</td>
 		<td>0.000</td>
 		<td>0.000</td>
-		<td>0.0000</td>
+		<td>0.000</td>
+		<td>0</td>
 		<td>0.00</td>
 		<td>0.000</td>
 		<td>
@@ -177,6 +183,21 @@
 					</td>
 				</tr>
 				<tr>
+					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>市場簡稱：</td>
+					<td>
+						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:50%;"/>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>是否收電費：</td>
+					<td>
+						<select name="" style="width:50%">
+							<option value="">是</option>
+							<option value="">否</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
 					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>電基本費：</td>
 					<td>
 						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:50%;"/>
@@ -198,6 +219,15 @@
 					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>電加權比：</td>
 					<td>
 						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:50%;"/>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>是否收水費：</td>
+					<td>
+						<select name="" style="width:50%">
+							<option value="">是</option>
+							<option value="">否</option>
+						</select>
 					</td>
 				</tr>
 				<tr>

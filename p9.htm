@@ -30,6 +30,7 @@
 		</tr>
 	</table>
 <p />
+	<div class="notectx">* 修改過的資料, 需重新登入才會生效!</div>
 	<table border="0" id="table4" style="width:100%; border-collapse: collapse">
 		<tr>
 			<td align="center" style="height:30px">
@@ -155,10 +156,27 @@
 				<tr>
 					<td style="height: 26px;" class="subjecttitle">是否使用：</td>
 					<td>
-						<select name="" style="width:50%">
+						<select name="" style="width:150px">
 							<option value="">是</option>
 							<option value="">否</option>
 						</select>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;vertical-align:top;" class="subjecttitle">租用市場權限：</td>
+					<td>
+						<div style="line-height:26px">
+						<label><input type="checkbox" name="addr" value="A"/> 中央市場一</label>
+						<label><input type="checkbox" name="addr" value="B"/> 中央市場二</label>
+						<label><input type="checkbox" name="addr" value="C"/> 中央市場三</label><br/>
+						<label><input type="checkbox" name="addr" value="D"/> 中央市場四</label>
+						<label><input type="checkbox" name="addr" value="E"/> 北區</label>
+						<label><input type="checkbox" name="addr" value="F"/> 東區</label><br/>
+						<label><input type="checkbox" name="addr" value="G"/> 西區</label>
+						<label><input type="checkbox" name="addr" value="H"/> 露店</label>
+						<label><input type="checkbox" name="addr" value="I"/> 永大</label><br/>
+						</div>
+					</td>
 					</td>
 				</tr>
 			</table>
@@ -225,8 +243,8 @@ $(function(){
 	var windowHeight = $(window).height()-20;
 	$("#dialog-form").dialog({
 		autoOpen: false,
-		height: 300,
-		width: 500,
+		height: 450,
+		width: '80%',
 		modal: true,
 		open: function(event, ui) {
 		},

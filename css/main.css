@@ -604,3 +604,23 @@ font.resultcountcs {
   /* box-shadow: #CCC 0 0 .25em;
   behavior: url(PIE.htc);*/
 }
+.transsp {
+	padding:3px;
+	color:#2237CE;
+	font-size:80%;
+	border:1px solid #2237CE;
+	-webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  cursor:pointer;
+}
+.inheritsp {
+	padding:3px;
+	color:#BD0800;
+	font-size:80%;
+	border:1px solid #BD0800;
+	-webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  cursor:pointer;
+}

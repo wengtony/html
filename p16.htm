@@ -5,7 +5,7 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>menu7-類別維護</title>
+<title>menu18-管理者維護</title>
 <link href="css/main.css" type="text/css" rel="stylesheet" />
 <link href="css/humanity/jquery-ui.min.css	" type="text/css" rel="stylesheet" />
 <script type="text/javascript" src="scripts/jquery-1.12.4.min.js"></script>
@@ -21,7 +21,7 @@
 <form id="Paper" name="Paper" action="/submission/manage/Paper.xhtml" method="get">
 	<table class="searchcs" style="width:100%">
 		<tr>
-			<td class="titletd" style="height:27px">類別維護</td>
+			<td class="titletd" style="height:27px">參數設定</td>
 		</tr>
 		<tr>
 			<td>
@@ -30,42 +30,21 @@
 		</tr>
 	</table>
 <p />
-	<table border="0" id="table4" style="width:100%; border-collapse: collapse">
-		<tr>
-			<td align="center" style="height:30px">
-				<input type="button" value="新增" id="Paper_0" class="btn_bg" onclick="addOne()"/>
-			</td>
-		</tr>
-	</table>
 </form>
-
-
-
-
-
-<!-- 分頁模組 -->
-<table class="pagecs" border="0" style="width:100%">
-	<tr>
-		<td>共 <span class="resultcountcs">20</span> 筆	</td>
-	</tr>
-</table>
-<!-- 分頁模組結束 -->
 
 <div class="resultdivcs" id="layer1">
 <table class="resultcs" style="width:100%" cellpadding="3">
 	<tr class="toptitlecs">
-		<td style="width:6%; height: 31px;">編號</td>
-		<td style="width:10%;">類別名稱</td>
-		<td style="width:7%;">是否使用</td>
+		<td style="width:20%; height: 31px;">參數名稱</td>
+		<td style="width:60%;">數值</td>
 		<td>動作</td>
 	</tr>
 	<tbody id="resultcs">
-	
+
 	<tr>
-		<td style="height: 31px;">01</td>
-		<td>百貨</td>
+		<td style="height: 31px;">夏季電費月份範圍</td>
 		<td>
-			<span class="yessp">是</span>
+			<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:95%;"/>
 		</td>
 		<td>
 			<input type="button" value="修改" onclick="openForm(6)"/>
@@ -73,10 +52,9 @@
 	</tr>
 
 	<tr>
-		<td style="height: 31px;">02</td>
-		<td>飲食</td>
+		<td style="height: 31px;">冬季電費月份範圍</td>
 		<td>
-			<span class="yessp">是</span>
+			<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:95%;"/>
 		</td>
 		<td>
 			<input type="button" value="修改" onclick="openForm(6)"/>
@@ -84,10 +62,19 @@
 	</tr>
 
 	<tr>
-		<td style="height: 31px;">03</td>
-		<td>雜貨</td>
+		<td style="height: 31px;">臨時攤市場設定</td>
 		<td>
-			<span class="yessp">是</span>
+						<div style="line-height:26px">
+						<label><input type="checkbox" name="addr" value="A"/> 中央市場一</label>
+						<label><input type="checkbox" name="addr" value="B"/> 中央市場二</label>
+						<label><input type="checkbox" name="addr" value="C"/> 中央市場三</label><br/>
+						<label><input type="checkbox" name="addr" value="D"/> 中央市場四</label>
+						<label><input type="checkbox" name="addr" value="E"/> 北區</label>
+						<label><input type="checkbox" name="addr" value="F"/> 東區</label><br/>
+						<label><input type="checkbox" name="addr" value="G"/> 西區</label>
+						<label><input type="checkbox" name="addr" value="H"/> 露店</label>
+						<label><input type="checkbox" name="addr" value="I"/> 永大</label><br/>
+						</div>
 		</td>
 		<td>
 			<input type="button" value="修改" onclick="openForm(6)"/>
@@ -95,10 +82,9 @@
 	</tr>
 
 	<tr>
-		<td style="height: 31px;">04</td>
-		<td>疏菜</td>
+		<td style="height: 31px;">廣告刊板市場設定</td>
 		<td>
-			<span class="yessp">是</span>
+			<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:95%;"/>
 		</td>
 		<td>
 			<input type="button" value="修改" onclick="openForm(6)"/>
@@ -106,10 +92,9 @@
 	</tr>
 
 	<tr>
-		<td style="height: 31px;">05</td>
-		<td>鮮果</td>
+		<td style="height: 31px;">廣告看板數量設定</td>
 		<td>
-			<span class="yessp">是</span>
+			<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:95%;"/>
 		</td>
 		<td>
 			<input type="button" value="修改" onclick="openForm(6)"/>
@@ -128,25 +113,48 @@
 	<form id="frm">
 			<table class="searchtb" style="width:100%" cellpadding="3">
 				<tr>
-					<td style="height: 26px;width:30%;" class="subjecttitle"><span class="mustkeyin">* </span>編號：</td>
+					<td style="height: 26px;width:30%;" class="subjecttitle"><span class="mustkeyin">* </span>姓名：</td>
 					<td>
 						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:150px;"/>
 						<input type="hidden" id="sid" name="vo.sid"/>
 					</td>
 				</tr>
 				<tr>
-					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>類別名稱：</td>
+					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>帳號：</td>
 					<td>
-						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:50%;"/>
+						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:150px;"/>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;" class="subjecttitle"><span class="mustkeyin">* </span>密碼：</td>
+					<td>
+						<input type="text" id="cid" name="vo.cid" maxlength="10" style="width:150px;"/>
 					</td>
 				</tr>
 				<tr>
 					<td style="height: 26px;" class="subjecttitle">是否使用：</td>
 					<td>
-						<select name="" style="width:50%">
+						<select name="" style="width:150px">
 							<option value="">是</option>
 							<option value="">否</option>
 						</select>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 26px;vertical-align:top;" class="subjecttitle">租用市場權限：</td>
+					<td>
+						<div style="line-height:26px">
+						<label><input type="checkbox" name="addr" value="A"/> 中央市場一</label>
+						<label><input type="checkbox" name="addr" value="B"/> 中央市場二</label>
+						<label><input type="checkbox" name="addr" value="C"/> 中央市場三</label><br/>
+						<label><input type="checkbox" name="addr" value="D"/> 中央市場四</label>
+						<label><input type="checkbox" name="addr" value="E"/> 北區</label>
+						<label><input type="checkbox" name="addr" value="F"/> 東區</label><br/>
+						<label><input type="checkbox" name="addr" value="G"/> 西區</label>
+						<label><input type="checkbox" name="addr" value="H"/> 露店</label>
+						<label><input type="checkbox" name="addr" value="I"/> 永大</label><br/>
+						</div>
+					</td>
 					</td>
 				</tr>
 			</table>
@@ -160,7 +168,7 @@ function addOne() {
 	$('#updtr').hide();
 	$('#sid').val('');
 	$('#tid').val('');
-	$('#dialog-form').dialog('option', 'title', '新增鋪位類別');
+	$('#dialog-form').dialog('option', 'title', '新增管理者');
 	var btns = {};
 	btns['新增'] = function() {
 		bb = validateAll();
@@ -213,8 +221,8 @@ $(function(){
 	var windowHeight = $(window).height()-20;
 	$("#dialog-form").dialog({
 		autoOpen: false,
-		height: 300,
-		width: 500,
+		height: 450,
+		width: '80%',
 		modal: true,
 		open: function(event, ui) {
 		},
